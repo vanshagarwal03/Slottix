@@ -87,4 +87,11 @@ with col4:
     if st.button("Open", key="btn_teacher_summary"):
         st.switch_page("pages/teacher_lecture_summary.py")
 
+with col5:
+    st.subheader("🏢 About Slottix")
+    st.write("Product overview, services, team details, and institutional demo contact.")
+    if st.button("Open", key="btn_about"):
+        st.switch_page("pages/about_slottix.py")
+
+
 st.divider()

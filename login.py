@@ -150,6 +150,13 @@ if not st.session_state.logged_in:
     col_b1, col_b2, col_b3 = st.columns([1.35, 1.0, 1.35])
     with col_b2:
         st.button("Login", on_click=login, use_container_width=True)
+
+    st.markdown("<div style='height: 18px;'></div>", unsafe_allow_html=True)
+    col_a1, col_a2, col_a3 = st.columns([1.0, 2.0, 1.0])
+    with col_a2:
+        if st.button("🏢 About Slottix & Services", use_container_width=True, key="btn_login_about"):
+            st.switch_page("pages/about_slottix.py")
+
 else:
     # Already logged in → redirect based on role
     if st.session_state.is_admin:
