@@ -55,6 +55,13 @@ dark_css = """
         border-color: #89b4fa !important;
         color: #ffffff !important;
     }
+    [data-testid="stImage"] img {
+        filter: drop-shadow(0 0 25px rgba(0, 168, 255, 0.25));
+        transition: transform 0.3s ease;
+    }
+    [data-testid="stImage"] img:hover {
+        transform: scale(1.02);
+    }
 </style>
 """
 st.markdown(dark_css, unsafe_allow_html=True)
@@ -75,12 +82,12 @@ with col_back:
 col_l1, col_l2, col_l3 = st.columns([1.5, 2.5, 1.5])
 with col_l2:
     try:
-        st.image("slottix_3d_logo.jpg", use_container_width=True)
+        st.image("slottix_3d_logo_blended.png", use_container_width=True)
     except Exception:
         try:
-            st.image("slottix_logo.png", use_container_width=True)
+            st.image("slottix_3d_logo.jpg", use_container_width=True)
         except Exception:
-            st.markdown("<h1 style='text-align:center;'>SLOTTIX</h1>", unsafe_allow_html=True)
+            st.image("slottix_logo.png", use_container_width=True)
 
 st.divider()
 
