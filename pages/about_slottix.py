@@ -191,7 +191,7 @@ with col_t2:
     st.markdown("""
     <div class="card-box" style="text-align: center;">
         <h3 style="margin-bottom: 4px;">👤 Ankit Kumar</h3>
-        <p style="color: #89b4fa !important; font-weight: 600; font-size: 0.95rem; margin-top: 0;">Strategy & Creative Lead</p>
+        <p style="color: #89b4fa !important; font-weight: 600; font-size: 0.95rem; margin-top: 0;">Marketing & Creative Lead</p>
     </div>
     """, unsafe_allow_html=True)
 
