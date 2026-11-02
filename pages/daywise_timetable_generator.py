@@ -179,7 +179,11 @@ def highlight_replacements(val):
             return 'background-color: #ffcccc'  # Light red
     return ''
 
-st.dataframe(grid_df.style.applymap(highlight_replacements))
+try:
+    styled_grid = grid_df.style.map(highlight_replacements) if hasattr(grid_df.style, "map") else grid_df.style.applymap(highlight_replacements)
+    st.dataframe(styled_grid, use_container_width=True)
+except Exception:
+    st.dataframe(grid_df, use_container_width=True)
 
 # =====================
 # Download Updated Timetable in Pivot Format

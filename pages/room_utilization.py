@@ -113,7 +113,7 @@ for room in room_to_show:
 
     try:
         st.dataframe(
-            pivot.style.applymap(colour_cell),
+            pivot.style.map(colour_cell) if hasattr(pivot.style, "map") else pivot.style.applymap(colour_cell),
             use_container_width=True
         )
     except Exception:
